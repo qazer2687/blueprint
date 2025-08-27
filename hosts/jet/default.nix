@@ -73,7 +73,7 @@
     sudo-rs.enable = true;
     systemd-boot.enable = true;
     vscode.enable = true;
-    xdg.enable = true;
+    #xdg.enable = true;
 
     foot.enable = true;
     hyprland.enable = true;
