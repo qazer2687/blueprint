@@ -52,7 +52,7 @@
         # packages with unfree licences.
         allowUnfree = true;
       };
-      overlays = [
+      /*overlays = [
         self.overlays.additions
         # Enabling the modifications overlay for all machines
         # means that any package which has an overlay will be
@@ -61,7 +61,7 @@
         self.overlays.modifications
 
         # inputs.<name>.overlay...
-      ];
+      ];*/
     };
 
     ########## NETWORKING ##########
