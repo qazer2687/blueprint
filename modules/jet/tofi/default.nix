@@ -1,0 +1,38 @@
+{
+  lib,
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  options.modules.tofi.enable = lib.mkEnableOption "";
+
+  config = lib.mkIf config.modules.tofi.enable {
+    systemd.tmpfiles.rules = [
+    "f %h/.config/tofi/config - - - -
+      anchor=bottom
+      width=100%
+      height=22
+      scale=true
+      horizontal=true
+      font-size=11
+      prompt-text=‌‌ run:‌‌ 
+      prompt-padding=0
+      font=${pkgs.departure-mono}/share/fonts/otf/DepartureMono-Regular.otf
+      outline-width=0
+      hint-font=false
+      border-width=0
+      input-color=#cdd6f4
+      selection-color=#cba6f7
+      text-color=#cdd6f4
+      background-color=#11111b
+      min-input-width=100
+      result-spacing=15
+      padding-top=0
+      padding-bottom=0
+      padding-left=0
+      padding-right=0
+    "
+    ];
+  };
+}
