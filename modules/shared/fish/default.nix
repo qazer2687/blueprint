@@ -51,7 +51,7 @@ in {
         set fish_greeting
 
         # Source the functions from the generated file
-        source "${fishFunctions}"
+        source "${functions}"
       '';
 
       shellAliases = {
